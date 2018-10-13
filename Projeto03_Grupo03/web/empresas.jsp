@@ -1,7 +1,7 @@
 <%-- 
-    Document   : pessoas
-    Created on : 13/10/2018, 14:36:09
-    Author     : Ana
+    Document   : Empresa
+    Created on : 13/10/2018, 16:36:09
+    Author     : Peterson
 --%>
 
 
@@ -26,7 +26,7 @@
                 String Telefone = request.getParameter("Telefone");
                 CadastroEmpresa c = new CadastroEmpresa();
                 c.setDados(Nome, Cnpj, WebSite, Telefone);
-                Me.getCadastroEmpresa().add(c);
+                Me.getCadastroempresa().add(c);
                 response.sendRedirect("home.jsp");
                 
             }
