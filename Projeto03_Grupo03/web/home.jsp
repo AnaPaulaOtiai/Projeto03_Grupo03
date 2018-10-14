@@ -36,9 +36,12 @@
                 <td><%=c.getTelefone()%></td>
                 <% int i = Mp.getCadastroPessoas().indexOf(c);%>
                 <td>
-                    <a href="alterar.jsp?i=<%= i%>"
+                    <a href="alterar.jsp?i=<%= i%>">
                         <button>Alterar</button>
                     </a>
+                         <a href="remover.jsp?i=<%= i %>">
+                        <button>Remover</button>
+                     </a>
                 </td>
             </tr>
            <%}%>
