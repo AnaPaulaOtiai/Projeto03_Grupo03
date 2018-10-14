@@ -5,6 +5,8 @@
 --%>
 
 
+<%@page import="br.com.fatecpg.web.Cadastroveiculos"%>
+<%@page import="br.com.fatecpg.web.Mv"%>
 <%@page import="br.com.fatecpg.web.Mp"%>
 <%@page import="br.com.fatecpg.web.Me"%>
 <%@page import="br.com.fatecpg.web.CadastroEmpresa"%>
@@ -53,7 +55,8 @@
         <table border="1">
             <tr>
                 <th>Nome</th> 
-                <th>Cnpj</th> 
+                <th>Razão Social</th> 
+                <th>CNPJ</th> 
                 <th>WebSite</th> 
                 <th>Telefone</th> 
                 <th>Comandos</th> 
@@ -61,18 +64,50 @@
             <% for(CadastroEmpresa c: Me.getCadastroempresa()){%>
             <tr>
                 <td><%=c.getNome()%></td>
-                <td><%=c.getCnpj()%></td>
+                <td><%=c.getRazãoSocial()%></td>
+                <td><%=c.getCNPJ()%></td>
                 <td><%=c.getWebSite()%></td>
                 <td><%=c.getTelefone()%></td>
                 <% int i = Me.getCadastroempresa().indexOf(c);%>
                 <td>
-                    <a href="alterar.jsp?i=<%= i%>"
+                    <a href="alterar.jsp?i=<%= i%>">
                         <button>Alterar</button>
                     </a>
+                         <a href="removerE.jsp?i=<%= i %>">
+                        <button>Remover</button>
+                     </a>
                 </td>
             </tr>
            <%}%>
         </table>
-        
+        <h1>Cadastro de Veiculos</h1>
+        <h1>Listagem</h1>
+        <a href="veiculos.jsp"><button>Registrar novo veiculo</button></a>
+        <table border="1">
+            <tr>
+                <th>Placa</th> 
+                <th>Marca</th> 
+                <th>Modelo</th> 
+                <th>Cor</th> 
+                <th>Comandos</th> 
+            </tr>
+                <% for(Cadastroveiculos c: Mv.getCadastroveiculos()){%>
+            <tr>
+                <td><%=c.getPlaca()%></td>
+                <td><%=c.getMarca()%></td>
+                <td><%=c.getModelo()%></td>
+                <td><%=c.getCor()%></td>
+                <% int i = Mv.getCadastroveiculos().indexOf(c);%>
+                <td>
+                    <a href="alterar.jsp?i=<%= i%>">
+                        <button>Alterar</button>
+                    </a>
+                         <a href="removerv.jsp?i=<%= i %>">
+                        <button>Remover</button>
+                     </a>
+                </td>
+            </tr>
+           <%}%>
+        </table>
     </body>
 </html>

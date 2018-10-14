@@ -17,25 +17,27 @@
     </head>
     <body>
         <h1>Cadastro de Empresas</h1>
-        <h2>Novo</h2>
+      
         <%
             if(request.getParameter("novoCadastro")!=null){
                 String Nome = request.getParameter("Nome");
-                String Cnpj = request.getParameter("Cnpj");
+                String RazãoSocial = request.getParameter("RazãoSocial");
+                String CNPJ = request.getParameter("CNPJ");
                 String WebSite = request.getParameter("WebSite");
                 String Telefone = request.getParameter("Telefone");
                 CadastroEmpresa c = new CadastroEmpresa();
-                c.setDados(Nome, Cnpj, WebSite, Telefone);
+                c.setDados(Nome, RazãoSocial, CNPJ, WebSite, Telefone);
                 Me.getCadastroempresa().add(c);
                 response.sendRedirect("home.jsp");
                 
             }
         %>
         <form>
-            Nome:<br/><input type="text" name="Nome"/><br/>
-            CPF:<br/><input type="text" name="Cnpj"/><br/>
-            Email:<br/><input type="text" name="WebSite"/><br/>
-            Telefone:<br/><input type="text" name="Telefone"/><br/>
+            Nome: <br/><input type="text" name="Nome"/><br/>
+            Razão Social: <br/><input type="text" name="RazãoSocial"/><br/>
+            CNPJ: <br/><input type="text" name="CNPJ"/><br/>
+            WebSite: <br/><input type="text" name="WebSite"/><br/>
+            Telefone: <br/><input type="text" name="Telefone"/><br/>
             <br/><input type="submit" name="novoCadastro" value="Incluir"/><br/>
         </form>
     </body>

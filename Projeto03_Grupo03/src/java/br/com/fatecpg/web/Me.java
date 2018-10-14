@@ -19,13 +19,13 @@ import java.util.ArrayList;
     public static ArrayList<CadastroEmpresa> getCadastroempresa(){
         if(CadastroEmpresa.isEmpty()){
             CadastroEmpresa c1 = new CadastroEmpresa();
-            c1.setDados("Empresa Fulano","número do Cnpj","empresafulano@site.com","(13)99765-4878");
+            c1.setDados("Empresa Fulano","RazãoSocial","número do CNPJ","empresafulano@site.com","(13)99765-4878");
             CadastroEmpresa.add(c1);
             CadastroEmpresa c2 = new CadastroEmpresa();
-            c2.setDados("Empresa Fulano","número do Cnpj","empresafulano@site.com","(13)99765-4878");
+            c2.setDados("Empresa Fulano","RazãoSocial","número do CNPJ","empresafulano@site.com","(13)99765-4878");
             CadastroEmpresa.add(c2);
             CadastroEmpresa c3 = new CadastroEmpresa();
-            c3.setDados("empresa Fulano","número do Cnpj","empresafulano@site.com","(13)99765-4878");
+            c3.setDados("empresa Fulano","RazãoSocial","número do CNPJ","empresafulano@site.com","(13)99765-4878");
             CadastroEmpresa.add(c3);
             
         }

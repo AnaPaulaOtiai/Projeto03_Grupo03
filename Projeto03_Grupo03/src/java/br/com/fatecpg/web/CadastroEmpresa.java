@@ -12,13 +12,15 @@ package br.com.fatecpg.web;
  */
 public class CadastroEmpresa {
     private String Nome;
-    private String Cnpj;
+    private String RazãoSocial;
+    private String CNPJ;
     private String WebSite;
     private String Telefone;
-    public void setDados(String Nome,String Cnpj, String Email, String Telefone){
+    public void setDados(String Nome,String RazãoSocial,String CNPJ,String WebSite,String Telefone){
      this.setNome(Nome);
-     this.setCPF(Cnpj);
-     this.setWebSite(Email);
+     this.setRazãoSocial(RazãoSocial);
+     this.setCNPJ(CNPJ);
+     this.setWebSite(WebSite);
      this.setTelefone(Telefone);
 
    }
@@ -31,12 +33,20 @@ public class CadastroEmpresa {
         this.Nome = Nome;
     }
 
-    public String getCnpj() {
-        return Cnpj;
+    public String getRazãoSocial() {
+        return RazãoSocial;
     }
 
-    public void setCPF(String CPF) {
-        this.Cnpj = Cnpj;
+    public void setRazãoSocial(String RazãoSocial) {
+        this.RazãoSocial = RazãoSocial;
+    }
+
+    public String getCNPJ() {
+        return CNPJ;
+    }
+
+    public void setCNPJ(String CNPJ) {
+        this.CNPJ = CNPJ;
     }
 
     public String getWebSite() {
