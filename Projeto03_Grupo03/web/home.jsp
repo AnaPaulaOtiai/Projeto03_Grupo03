@@ -5,109 +5,23 @@
 --%>
 
 
-<%@page import="br.com.fatecpg.web.Cadastroveiculos"%>
-<%@page import="br.com.fatecpg.web.Mv"%>
-<%@page import="br.com.fatecpg.web.Mp"%>
-<%@page import="br.com.fatecpg.web.Me"%>
-<%@page import="br.com.fatecpg.web.CadastroEmpresa"%>
-<%@page import="br.com.fatecpg.web.Cadastropessoas"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home Cadastro de Pessoas</title>
+        <title>JSP Page</title>
     </head>
     <body>
-        <h1>Cadastro de Pessoas</h1>
-        <h1>Listagem</h1>
-        <a href="pessoas.jsp"><button>Registrar novo contato</button></a>
-        <table border="1">
-            <tr>
-                <th>Nome</th> 
-                <th>CPF</th> 
-                <th>Email</th> 
-                <th>Telefone</th> 
-                <th>Comandos</th> 
-            </tr>
-                <% for(Cadastropessoas c: Mp.getCadastroPessoas()){%>
-            <tr>
-                <td><%=c.getNome()%></td>
-                <td><%=c.getCPF()%></td>
-                <td><%=c.getEmail()%></td>
-                <td><%=c.getTelefone()%></td>
-                <% int i = Mp.getCadastroPessoas().indexOf(c);%>
-                <td>
-                    <a href="alterar.jsp?i=<%= i%>">
-                        <button>Alterar</button>
-                    </a>
-                         <a href="remover.jsp?i=<%= i %>">
-                        <button>Remover</button>
-                     </a>
-                </td>
-            </tr>
-           <%}%>
-        </table>
-        
-        <h1>Cadastro de Empresas</h1>
-        <h1>Listagem</h1>
-        <a href="empresas.jsp"><button>Registrar nova Empresa</button></a>
-        <table border="1">
-            <tr>
-                <th>Nome</th> 
-                <th>Razão Social</th> 
-                <th>CNPJ</th> 
-                <th>WebSite</th> 
-                <th>Telefone</th> 
-                <th>Comandos</th> 
-            </tr>
-            <% for(CadastroEmpresa c: Me.getCadastroempresa()){%>
-            <tr>
-                <td><%=c.getNome()%></td>
-                <td><%=c.getRazãoSocial()%></td>
-                <td><%=c.getCNPJ()%></td>
-                <td><%=c.getWebSite()%></td>
-                <td><%=c.getTelefone()%></td>
-                <% int i = Me.getCadastroempresa().indexOf(c);%>
-                <td>
-                    <a href="alterarE.jsp?i=<%= i%>">
-                        <button>Alterar</button>
-                    </a>
-                         <a href="removerE.jsp?i=<%= i %>">
-                        <button>Remover</button>
-                     </a>
-                </td>
-            </tr>
-           <%}%>
-        </table>
-        <h1>Cadastro de Veiculos</h1>
-        <h1>Listagem</h1>
-        <a href="veiculos.jsp"><button>Registrar novo veiculo</button></a>
-        <table border="1">
-            <tr>
-                <th>Placa</th> 
-                <th>Marca</th> 
-                <th>Modelo</th> 
-                <th>Cor</th> 
-                <th>Comandos</th> 
-            </tr>
-                <% for(Cadastroveiculos c: Mv.getCadastroveiculos()){%>
-            <tr>
-                <td><%=c.getPlaca()%></td>
-                <td><%=c.getMarca()%></td>
-                <td><%=c.getModelo()%></td>
-                <td><%=c.getCor()%></td>
-                <% int i = Mv.getCadastroveiculos().indexOf(c);%>
-                <td>
-                    <a href="alterarv.jsp?i=<%= i%>">
-                        <button>Alterar</button>
-                    </a>
-                         <a href="removerv.jsp?i=<%= i %>">
-                        <button>Remover</button>
-                     </a>
-                </td>
-            </tr>
-           <%}%>
-        </table>
+        <center><h1>Projeto03_Grupo03</h1></center>
+        <center><h1>Integrantes da Equipe</h1></center>
+        <center><h3>Ana Paula Otiai</h3></center>
+        <center><h3>Peterson da Silva Hernandez</h3></center>
+        <center><h3>Roberto Santanna Bernardo</h3></center>
+        <hr></br>
+        <center><a href="Mcadastropessoas.jsp"><button>Manutenção Cadastro de Pessoas</button></a></center></br>
+        <center><a href="Mcadastroempresas.jsp"><button>Manutenção Cadastro de Empresas</button></a></center></br>
+        <center><a href="Mcadastroveiculos.jsp"><button>Manutenção Cadastro de veiculos</button></a></center></br>
+     
     </body>
 </html>

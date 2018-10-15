@@ -1,0 +1,7 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<a href="home.jsp">Home</a>||
+<a href="Mcadastropessoas.jsp">Cadastro de Pessoas</a>||
+<a href="Mcadastroempresas">Cadastro de Empresas</a>||
+<a href="Mcadastroveiculos">Cadastro de Veiculos</a>||
+<hr>
