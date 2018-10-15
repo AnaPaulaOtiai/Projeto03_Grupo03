@@ -70,7 +70,7 @@
                 <td><%=c.getTelefone()%></td>
                 <% int i = Me.getCadastroempresa().indexOf(c);%>
                 <td>
-                    <a href="alterar.jsp?i=<%= i%>">
+                    <a href="alterarE.jsp?i=<%= i%>">
                         <button>Alterar</button>
                     </a>
                          <a href="removerE.jsp?i=<%= i %>">
@@ -99,7 +99,7 @@
                 <td><%=c.getCor()%></td>
                 <% int i = Mv.getCadastroveiculos().indexOf(c);%>
                 <td>
-                    <a href="alterar.jsp?i=<%= i%>">
+                    <a href="alterarv.jsp?i=<%= i%>">
                         <button>Alterar</button>
                     </a>
                          <a href="removerv.jsp?i=<%= i %>">

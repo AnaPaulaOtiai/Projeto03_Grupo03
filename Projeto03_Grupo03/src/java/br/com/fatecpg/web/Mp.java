@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author Ana
  */
 public class Mp {
-    private static final ArrayList<Cadastropessoas> Cadastropessoa = new ArrayList<>();
+    public static final ArrayList<Cadastropessoas> Cadastropessoa = new ArrayList<>();
     public static ArrayList<Cadastropessoas> getCadastroPessoas(){
         if(Cadastropessoa.isEmpty()){
             Cadastropessoas c1 = new Cadastropessoas();
