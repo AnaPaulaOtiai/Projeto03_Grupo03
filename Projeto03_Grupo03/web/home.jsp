@@ -44,7 +44,7 @@
         
         <div class="integrantes">
         <center><h3>Ana Paula Otiai</h3></center>
-        <center><h3>Peterson da Silva Hernandez</h3></center>
+        <center><h3>Peterson Hernandez</h3></center>
         <center><h3>Roberto Santanna Bernardo</h3></center>
         </div>
      
