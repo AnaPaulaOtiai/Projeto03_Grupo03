@@ -9,13 +9,19 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Cadastro de Empresas</title>
+        <style>
+            body {
+        background-image: url("image/FreeBackground1.jpg");
+        }
+        </style>
     </head>
     <body>
        <h1>Cadastro de Empresas</h1>
         <h1>Listagem</h1>
-        <a href="empresas.jsp"><button>Registrar nova Empresa</button></a>
+        <a href="empresas.jsp"><button class='bt' type='submit'>REGISTRAR NOVA EMPRESA</button></a>
         <table border="1">
             <tr>
                 <th>Nome</th> 
@@ -35,10 +41,10 @@
                 <% int i = Me.getCadastroempresa().indexOf(c);%>
                 <td>
                     <a href="alterarE.jsp?i=<%= i%>">
-                        <button>Alterar</button>
+                        <button class='btW' type='submit'>ALTERAR</button>
                     </a>
                          <a href="removerE.jsp?i=<%= i %>">
-                        <button>Remover</button>
+                        <button class='btW' type='submit'>REMOVER</button>
                      </a>
                 </td>
             </tr>
