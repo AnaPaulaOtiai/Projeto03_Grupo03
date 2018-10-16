@@ -10,13 +10,19 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Home Cadastro de Pessoas</title>
     </head>
     <body>
+        <style>
+            body {
+        background-image: url("image/FreeBackground1.jpg");
+        }
+        </style>
         <h1>Cadastro de Pessoas</h1>
         <h1>Listagem</h1>
-        <a href="pessoas.jsp"><button>Registrar novo contato</button></a>
+        <a href="pessoas.jsp"> <button class='bt' type='submit'>REGISTRAR NOVO CONTATO</button></a>
         <table border="1">
             <tr>
                 <th>Nome</th> 
@@ -34,10 +40,10 @@
                 <% int i = Mp.getCadastroPessoas().indexOf(c);%>
                 <td>
                     <a href="alterar.jsp?i=<%= i%>">
-                        <button>Alterar</button>
+                        <button class='btW' type='submit'>ALTERAR</button>
                     </a>
                          <a href="remover.jsp?i=<%= i %>">
-                        <button>Remover</button>
+                        <button class='btW' type='submit'>REMOVER</button>
                      </a>     
                 </td>
             </tr>
