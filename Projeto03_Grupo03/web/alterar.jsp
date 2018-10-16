@@ -10,12 +10,33 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="css/navbar.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo_1.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Alterar - CadastroPessoas</title>
+        <style>
+            body {
+        background-image: url("image/FreeBackground1.jpg");
+        }
+        </style>
     </head>
     <%int i = Integer.parseInt(request.getParameter("i"));%>
     <%Cadastropessoas c = Mp.getCadastroPessoas().get(i);%>
     <body>
+        <header>
+                  <div class="container">  
+                <a href="home.jsp"><h1 class="logo">Projeto03_Grupo03</h1></a>
+            <nav>
+        <ul> 
+        <li><a href="Mcadastropessoas.jsp">CADASTRO DE PESSOAS</a></li>
+        <li><a href="Mcadastroempresas.jsp">CADASTRO DE EMPRESAS</a></li>
+        <li><a href="Mcadastroveiculos.jsp">MANUTENÇÃO CADASTRO DE VEICULOS</a></li>
+        </ul>
+                </nav>
+        </div>
+            
+        </header>
+       
         <h1>Alteração de Cadastro de Pessoas</h1>
      
       <%
@@ -28,16 +49,23 @@
           response.sendRedirect("home.jsp");
       }
       %>
+      
         <form>
             Índice: <%= i %><br/><br/>
             <input type="hidden" name="i" value="<%=i%>"/>
-            Nome:<br/><input type="text" name="Nome" value="<%=c.getNome()%>"/><br/>
-            CPF:<br/><input type="text" name="CPF" value="<%=c.getCPF()%>"/><br/>
-            Email:<br/><input type="text" name="Email" value="<%=c.getEmail()%>"/><br/>
-            Telefone:<br/><input type="text" name="Telefone" value="<%=c.getTelefone()%>"/><br/>
-            <br/><input type="submit" name="alterarCadastropessoas" value="alterar"/>
+           <h1> Nome<br/><input  type="text" name="Nome" value="<%=c.getNome()%>"/></h1><br/>
+           <h1> CPF:<br/><input type="text" name="CPF" value="<%=c.getCPF()%>"/></h1><br/>
+            <h1>Email:<br/><input  type="text" name="Email" value="<%=c.getEmail()%>"/></h1><br/>
+            <h1>Telefone:<br/><input  type="text" name="Telefone" value="<%=c.getTelefone()%>"/></h1><br/>
+            <br/><input class="btr" type="submit" name="alterarCadastropessoas" value="alterar"/>
         </form>
-    </body>
+                    <div class="footer">
+  <p>DIREITOS AUTORAIS INTEGRANTES GRUPO 3</p>
+</div>
+                    <div class="footer">
+  <p>DIREITOS AUTORAIS INTEGRANTES GRUPO 3</p>
+</div>
+      </body>
 </html>
 
 

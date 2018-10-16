@@ -1,8 +1,8 @@
 h1 {
-    
+    font-size: 20px;
     color: black;
     text-align: center;
-    border: 5px solid lightcyan;
+    border: 1px solid lightcyan;
     background-color: lightblue;
 }
 
@@ -120,7 +120,41 @@ table, th, td {
     
 }
 
+/* BARRA NAVEGAÇÃO ----------------- */
 
+.nav ul {
+    float:left;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    }
+    
+.nav ul li {
+    position: relative;
+    }
+    
+.nav  li ul {
+    position: absolute;
+    left: 149px;
+    top: 0;
+    display: none;
+    }
+    
+.nav  ul li a {
+    display: block;
+    text-decoration: none;
+    color: #E2144A;
+    background: #fff;
+    padding: 5px;
+    border: 1px solid #ccc; 
+}
+.nav ul li a:hover{
+    text-decoration:underline;
+    font-weight: bold;
+    background: #ccc; }
+
+/*ALTERAR E REMOVER BOTOOM-----------------------*/
 
 .btW-container { 
    text-align: center 

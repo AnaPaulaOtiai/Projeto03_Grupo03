@@ -10,12 +10,32 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="css/navbar.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo_1.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Alterar - Cadastroveiculos</title>
+        <style>
+            body {
+        background-image: url("image/FreeBackground1.jpg");
+        }
+        </style>
     </head>
     <%int i = Integer.parseInt(request.getParameter("i"));%>
     <%Cadastroveiculos c = Mv.getCadastroveiculos().get(i);%>
     <body>
+        <header>
+                  <div class="container">  
+                <a href="home.jsp"><h1 class="logo">Projeto03_Grupo03</h1></a>
+            <nav>
+        <ul> 
+        <li><a href="Mcadastropessoas.jsp">CADASTRO DE PESSOAS</a></li>
+        <li><a href="Mcadastroempresas.jsp">CADASTRO DE EMPRESAS</a></li>
+        <li><a href="Mcadastroveiculos.jsp">MANUTENÇÃO CADASTRO DE VEICULOS</a></li>
+        </ul>
+                </nav>
+        </div>
+            
+        </header>
         <h1>Alteração de Cadastro de Pessoas</h1>
      
       <%
@@ -31,12 +51,15 @@
         <form>
             Índice: <%= i %><br/><br/>
             <input type="hidden" name="i" value="<%=i%>"/>
-            Placa:<br/><input type="text" name="Placa" value="<%=c.getPlaca()%>"/><br/>
-            Marca:<br/><input type="text" name="Marca" value="<%=c.getMarca()%>"/><br/>
-            Modelo:<br/><input type="text" name="Modelo" value="<%=c.getModelo()%>"/><br/>
-            Cor:<br/><input type="text" name="Cor" value="<%=c.getCor()%>"/><br/>
-            <br/><input type="submit" name="alterarCadastroveiculos" value="alterar"/>
+            <h1>Placa:<br/><input type="text" name="Placa" value="<%=c.getPlaca()%>"/></h1><br/>
+            <h1>Marca:<br/><input type="text" name="Marca" value="<%=c.getMarca()%>"/></h1><br/>
+            <h1>Modelo:<br/><input type="text" name="Modelo" value="<%=c.getModelo()%>"/></h1><br/>
+            <h1>Cor:<br/><input type="text" name="Cor" value="<%=c.getCor()%>"/></h1><br/>
+            <br/><input class="btr" type="submit" name="alterarCadastroveiculos" value="alterar"/>
         </form>
+                    <div class="footer">
+  <p>DIREITOS AUTORAIS INTEGRANTES GRUPO 3</p>
+</div>
     </body>
 </html>
 
