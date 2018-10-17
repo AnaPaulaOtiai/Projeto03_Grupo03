@@ -3,7 +3,7 @@
     Created on : 14/10/2018, 23:01:01
     Author     : Ana
 --%>
-
+<%@include file="WEB-INF/jspf/menu.jspf"%>
 <%@page import="br.com.fatecpg.web.CadastroEmpresa"%>
 <%@page import="br.com.fatecpg.web.Me"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -24,16 +24,7 @@
     <%CadastroEmpresa c = Me.getCadastroempresa().get(i);%>
     <body>
         <header>
-                  <div class="container">  
-                <a href="home.jsp"><h1 class="logo">Projeto03_Grupo03</h1></a>
-            <nav>
-        <ul> 
-        <li><a href="Mcadastropessoas.jsp">CADASTRO DE PESSOAS</a></li>
-        <li><a href="Mcadastroempresas.jsp">CADASTRO DE EMPRESAS</a></li>
-        <li><a href="Mcadastroveiculos.jsp">MANUTENÇÃO CADASTRO DE VEICULOS</a></li>
-        </ul>
-                </nav>
-        </div>
+     
             
         </header>
         <h1>Alteração de Cadastro de Empresa</h1>
@@ -46,18 +37,18 @@
           c.setWebSite(request.getParameter("WebSite"));
           c.setTelefone(request.getParameter("Telefone"));
           Me.getCadastroempresa().set(i, c);
-          response.sendRedirect("home.jsp");
+          response.sendRedirect("Mcadastroempresas.jsp");
       }
       %>
         <form>
-            Índice: <%= i %><br/><br/>
+           
             <input type="hidden" name="i" value="<%=i%>"/>
-            <h1>Nome:<br/><input type="text" name="Nome" value="<%=c.getNome()%>"/></h1><br/>
-            <h1>Razão Social:<br/><input type="text" name="RazãoSocial" value="<%=c.getRazãoSocial()%>"/></h1><br/>
-            <h1>CNPJ:<br/><input type="text" name="CNPJ" value="<%=c.getCNPJ()%>"/></h1><br/>
-            <h1>WebSite:<br/><input type="text" name="WebSite" value="<%=c.getWebSite()%>"/></h1><br/>
-            <h1>Telefone:<br/><input type="text" name="Telefone" value="<%=c.getTelefone()%>"/></h1><br/>
-            <br/><input class="btr" type="submit" name="alterarCadastroempresa" value="alterar"/>
+            Nome:<br/><input type="text" name="Nome" value="<%=c.getNome()%>"/></h1><br/>
+            Razão Social:<br/><input type="text" name="RazãoSocial" value="<%=c.getRazãoSocial()%>"/></h1><br/>
+            CNPJ:<br/><input type="text" name="CNPJ" value="<%=c.getCNPJ()%>"/></h1><br/>
+            WebSite:<br/><input type="text" name="WebSite" value="<%=c.getWebSite()%>"/></h1><br/>
+            Telefone:<br/><input type="text" name="Telefone" value="<%=c.getTelefone()%>"/></h1><br/>
+            <br/><input class="btr" type="submit" name="alterarCadastroempresa" value="Alterar"/>
         </form>
                     <div class="footer">
   <p>DIREITOS AUTORAIS INTEGRANTES GRUPO 3</p>

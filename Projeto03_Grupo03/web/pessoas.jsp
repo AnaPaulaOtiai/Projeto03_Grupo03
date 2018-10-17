@@ -4,7 +4,7 @@
     Author     : Ana
 --%>
 
-
+<%@include file="WEB-INF/jspf/menu.jspf"%>
 <%@page import="br.com.fatecpg.web.Mp"%>
 <%@page import="br.com.fatecpg.web.Cadastropessoas"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -23,20 +23,10 @@
     </head>
     <body>
         <header>
-                  <div class="container">  
-                <a href="home.jsp"><h1 class="logo">Projeto03_Grupo03</h1></a>
-            <nav>
-        <ul> 
-        <li><a href="Mcadastropessoas.jsp">CADASTRO DE PESSOAS</a></li>
-        <li><a href="Mcadastroempresas.jsp">CADASTRO DE EMPRESAS</a></li>
-        <li><a href="Mcadastroveiculos.jsp">MANUTENÇÃO CADASTRO DE VEICULOS</a></li>
-        </ul>
-                </nav>
-        </div>
-            
+     
         </header>
-        <h1>Cadastro de Pessoas</h1>
-        <h2>Novo</h2>
+        <h1>Inclusão de Cadastro de Pessoas</h1>
+        
         <%
             if(request.getParameter("novoCadastro")!=null){
                 String Nome = request.getParameter("Nome");
@@ -46,7 +36,7 @@
                 Cadastropessoas c = new Cadastropessoas();
                 c.setDados(Nome, CPF, Email, Telefone);
                 Mp.getCadastroPessoas().add(c);
-                response.sendRedirect("home.jsp");
+                response.sendRedirect("Mcadastropessoas.jsp");
                 
             }
         %>

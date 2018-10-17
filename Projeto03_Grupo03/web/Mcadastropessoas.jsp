@@ -3,7 +3,7 @@
     Created on : 15/10/2018, 16:44:32
     Author     : Ana
 --%>
-
+  <%@include file="WEB-INF/jspf/menu.jspf"%>
 <%@page import="br.com.fatecpg.web.Cadastropessoas"%>
 <%@page import="br.com.fatecpg.web.Mp"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -17,23 +17,14 @@
     </head>
     <body>
         <header>
-                  <div class="container">  
-               <a href="home.jsp"><h1 class="logo">Projeto03_Grupo03</h1></a>
-            <nav>
-        <ul> 
-        <li><a href="Mcadastropessoas.jsp">CADASTRO DE PESSOAS</a></li>
-        <li><a href="Mcadastroempresas.jsp">CADASTRO DE EMPRESAS</a></li>
-        <li><a href="Mcadastroveiculos.jsp">MANUTENÇÃO CADASTRO DE VEICULOS</a></li>
-        </ul>
-                </nav>
-        </div>
-            
+    
         </header>
         <style>
             body {
         background-image: url("image/FreeBackground1.jpg");
         }
         </style>
+             
         <h1>Cadastro de Pessoas</h1>
         <h1>Listagem</h1>
         <a href="pessoas.jsp"> <button class='bt' type='submit'>REGISTRAR NOVO CONTATO</button></a>

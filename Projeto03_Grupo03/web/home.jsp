@@ -6,6 +6,7 @@
 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+   
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,14 +26,11 @@
     <body>
         <header>
                   <div class="container">  
-                      <a href="home.jsp"><h1 class="logo">Projeto03_Grupo03</h1></a>
-            <nav>
-        <ul> 
-        <li><a href="Mcadastropessoas.jsp">CADASTRO DE PESSOAS</a></li>
-        <li><a href="Mcadastroempresas.jsp">CADASTRO DE EMPRESAS</a></li>
-        <li><a href="Mcadastroveiculos.jsp">MANUTENÇÃO CADASTRO DE VEICULOS</a></li>
-        </ul>
-                </nav>
+                         
+        <a href="home.jsp"><button>Home</button></a>
+        <a href="Mcadastropessoas.jsp"><button>Cadastro de Pessoas</button></a>
+        <a href="Mcadastroempresas.jsp"><button>Cadastro de Empresas</button></a>
+        <a href="Mcadastroveiculos.jsp"><button>Cadastro de Veiculos</button></a>
         </div>
             
         </header>

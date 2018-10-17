@@ -3,7 +3,7 @@
     Created on : 14/10/2018, 14:57:02
     Author     : Ana
 --%>
-
+<%@include file="WEB-INF/jspf/menu.jspf"%>
 <%@page import="br.com.fatecpg.web.Cadastropessoas"%>
 <%@page import="br.com.fatecpg.web.Mp"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -24,17 +24,7 @@
     <%Cadastropessoas c = Mp.getCadastroPessoas().get(i);%>
     <body>
         <header>
-                  <div class="container">  
-                <a href="home.jsp"><h1 class="logo">Projeto03_Grupo03</h1></a>
-            <nav>
-        <ul> 
-        <li><a href="Mcadastropessoas.jsp">CADASTRO DE PESSOAS</a></li>
-        <li><a href="Mcadastroempresas.jsp">CADASTRO DE EMPRESAS</a></li>
-        <li><a href="Mcadastroveiculos.jsp">MANUTENÇÃO CADASTRO DE VEICULOS</a></li>
-        </ul>
-                </nav>
-        </div>
-            
+      
         </header>
        
         <h1>Alteração de Cadastro de Pessoas</h1>
@@ -46,25 +36,23 @@
           c.setEmail(request.getParameter("Email"));
           c.setTelefone(request.getParameter("Telefone"));
           Mp.getCadastroPessoas().set(i, c);
-          response.sendRedirect("home.jsp");
+          response.sendRedirect("Mcadastropessoas.jsp");
       }
       %>
       
         <form>
-            Índice: <%= i %><br/><br/>
-            <input type="hidden" name="i" value="<%=i%>"/>
-           <h1> Nome<br/><input  type="text" name="Nome" value="<%=c.getNome()%>"/></h1><br/>
-           <h1> CPF:<br/><input type="text" name="CPF" value="<%=c.getCPF()%>"/></h1><br/>
-            <h1>Email:<br/><input  type="text" name="Email" value="<%=c.getEmail()%>"/></h1><br/>
-            <h1>Telefone:<br/><input  type="text" name="Telefone" value="<%=c.getTelefone()%>"/></h1><br/>
-            <br/><input class="btr" type="submit" name="alterarCadastropessoas" value="alterar"/>
+          
+           <input type="hidden" name="i" value="<%=i%>"/>
+           Nome:<br/><input  type="text" name="Nome" value="<%=c.getNome()%>"/><br/>
+           CPF:<br/><input type="text" name="CPF" value="<%=c.getCPF()%>"/><br/>
+           Email:<br/><input  type="text" name="Email" value="<%=c.getEmail()%>"/><br/>
+           Telefone:<br/><input  type="text" name="Telefone" value="<%=c.getTelefone()%>"/><br/>
+            <br/><input class="btr" type="submit" name="alterarCadastropessoas" value="Alterar"/>
         </form>
                     <div class="footer">
   <p>DIREITOS AUTORAIS INTEGRANTES GRUPO 3</p>
 </div>
-                    <div class="footer">
-  <p>DIREITOS AUTORAIS INTEGRANTES GRUPO 3</p>
-</div>
+ 
       </body>
 </html>
 

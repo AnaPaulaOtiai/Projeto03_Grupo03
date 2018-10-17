@@ -3,9 +3,9 @@
     Created on : 14/10/2018, 14:59:09
     Author     : Ana
 --%>
-
 <%@page import="br.com.fatecpg.web.Cadastropessoas"%>
 <%@page import="br.com.fatecpg.web.Mp"%>
+<%@include file="WEB-INF/jspf/menu.jspf"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,43 +15,34 @@
         background-image: url("image/FreeBackground1.jpg");
         }
         </style>
-        <link rel="stylesheet" type="text/css" href="css/navbar.css">s
+        <link rel="stylesheet" type="text/css" href="css/navbar.css">
         <link rel="stylesheet" type="text/css" href="css/estilo_1.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Alterar - CadastroPessoas</title>
+        <title>Remover - CadastroPessoas</title>
     </head>
     <%int i = Integer.parseInt(request.getParameter("i"));%>
     <%Cadastropessoas c = Mp.getCadastroPessoas().get(i);%>
     
     <body>
         <header>
-                  <div class="container">  
-                <a href="home.jsp"><h1 class="logo">Projeto03_Grupo03</h1></a>
-            <nav>
-        <ul> 
-        <li><a href="Mcadastropessoas.jsp">CADASTRO DE PESSOAS</a></li>
-        <li><a href="Mcadastroempresas.jsp">CADASTRO DE EMPRESAS</a></li>
-        <li><a href="Mcadastroveiculos.jsp">MANUTENÇÃO CADASTRO DE VEICULOS</a></li>
-        </ul>
-                </nav>
-        </div>
-            
+   
         </header>
-        <h1>Alteração Cadastro de Pessoas</h1>
-        <h2>Remover</h2>
+        <h1>Remover Cadastro de Pessoas</h1>
+       
       <%
       if(request.getParameter("removerCadastroPessoas")!=null){
           Mp.getCadastroPessoas().remove(i);
-          response.sendRedirect("home.jsp");
+          response.sendRedirect("Mcadastropessoas.jsp");
       }
       %>
         <form>
-            Índice: <%= i %><br/><br/>
+           
             <input type="hidden" name="i" value="<%=i%>"/>
-            <h1>    Nome:<br><%=c.getNome()%>           </h1><br/>
-            <h1>    CPF:<br><%=c.getCPF()%>             </h1><br/>
-            <h1>    E-mail:<br><%=c.getEmail()%>        </h1><br/>
-            <h1>    Telefone:<br><%=c.getTelefone()%>   </h1><br/>
+            Nome:<br/><input  type="text" name="Nome" value="<%=c.getNome()%>"/><br/>
+            CPF:<br/><input  type="text" name="CPF" value="<%=c.getCPF()%>"/><br/>
+            E-mail:<br/><input  type="text" name="Email" value="<%=c.getEmail()%>"/><br/>
+            Telefone:<br/><input  type="text" name="Telefone" value="<%=c.getTelefone()%>"/><br/>
+            
             <br/><input class="btr" type="submit" name="removerCadastroPessoas" value="Remover"/>
         </form>
                     <div class="footer">

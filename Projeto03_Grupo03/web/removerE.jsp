@@ -3,7 +3,7 @@
     Created on : 14/10/2018, 17:41:47
     Author     : Ana
 --%>
-
+<%@include file="WEB-INF/jspf/menu.jspf"%>
 <%@page import="br.com.fatecpg.web.CadastroEmpresa"%>
 <%@page import="br.com.fatecpg.web.Me"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -13,7 +13,7 @@
         <link rel="stylesheet" type="text/css" href="css/navbar.css">
         <link rel="stylesheet" type="text/css" href="css/estilo_1.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Remover - CadastroEmpresa</title>
+        <title>Remover Cadastro de Empresa</title>
          <style>
             body {
         background-image: url("image/FreeBackground1.jpg");
@@ -24,34 +24,23 @@
     <%CadastroEmpresa c = Me.getCadastroempresa().get(i);%>
     <body>
         <header>
-                  <div class="container">  
-                <a href="home.jsp"><h1 class="logo">Projeto03_Grupo03</h1></a>
-            <nav>
-        <ul> 
-        <li><a href="Mcadastropessoas.jsp">CADASTRO DE PESSOAS</a></li>
-        <li><a href="Mcadastroempresas.jsp">CADASTRO DE EMPRESAS</a></li>
-        <li><a href="Mcadastroveiculos.jsp">MANUTENÇÃO CADASTRO DE VEICULOS</a></li>
-        </ul>
-                </nav>
-        </div>
-            
+     
         </header>
-        <h1> Alteração Cadastro de Empresa</h1>
-        <h2>Remover</h2>
+        <h1>Remover Cadastro de Empresa</h1>
+        
       <%
       if(request.getParameter("removerCadastroEmpresa")!=null){
           Me.getCadastroempresa().remove(i);
-          response.sendRedirect("home.jsp");
+          response.sendRedirect("Mcadastroempresas.jsp");
       }
       %>
         <form>
-            Índice: <%= i %><br/><br/>
             <input type="hidden" name="i" value="<%=i%>"/>
-            <h1>    Nome: <br><%=c.getNome()%>                 </h1><br/>
-            <h1>    Razão Social<br><%=c.getRazãoSocial()%>    </h1><br/>
-            <h1>    CNPJ:<br><%=c.getCNPJ()%>                  </h1><br/>
-            <h1>    WebSite:<br><%=c.getWebSite()%>            </h1><br/>
-            <h1>    Telefone:<br><%=c.getTelefone()%>          </h1><br/>
+            Nome:<br/><input type="text" name="Nome" value="<%=c.getNome()%>"/></h1><br/>
+            Razão Social:<br/><input type="text" name="RazãoSocial" value="<%=c.getRazãoSocial()%>"/></h1><br/>
+            CNPJ:<br/><input type="text" name="CNPJ" value="<%=c.getCNPJ()%>"/></h1><br/>
+            WebSite:<br/><input type="text" name="WebSite" value="<%=c.getWebSite()%>"/></h1><br/>
+            Telefone:<br/><input type="text" name="Telefone" value="<%=c.getTelefone()%>"/></h1><br/>
             <br/><input class="btr" type="submit" name="removerCadastroEmpresa" value="Remover"/>
         </form>
                     <div class="footer">
