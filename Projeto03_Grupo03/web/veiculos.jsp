@@ -24,7 +24,7 @@
      
         </header>
         
-        <h1>Inclusão de Cadastro de Veiculos</h1>
+        <h1><center>Inclusão de Cadastro de Veiculos</center></h1>
       
         <%
             if(request.getParameter("novoCadastroveiculos")!=null){

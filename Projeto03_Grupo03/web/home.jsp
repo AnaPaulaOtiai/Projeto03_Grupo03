@@ -25,19 +25,16 @@
     </head>
     <body>
         <header>
-                  <div class="container">  
-                         
+               
+        <center>           
         <a href="home.jsp"><button>Home</button></a>
         <a href="Mcadastropessoas.jsp"><button>Cadastro de Pessoas</button></a>
         <a href="Mcadastroempresas.jsp"><button>Cadastro de Empresas</button></a>
         <a href="Mcadastroveiculos.jsp"><button>Cadastro de Veiculos</button></a>
-        </div>
+        </center>
             
         </header>
-        
-            
-        
-                      
+                  
         <center><h1>Integrantes da Equipe</h1></center>
         
         <div class="integrantes">

@@ -43,7 +43,7 @@
             E-mail:<br/><input  type="text" name="Email" value="<%=c.getEmail()%>"/><br/>
             Telefone:<br/><input  type="text" name="Telefone" value="<%=c.getTelefone()%>"/><br/>
             
-            <br/><input class="btr" type="submit" name="removerCadastroPessoas" value="Remover"/>
+            <br/><input type="submit" name="removerCadastroPessoas" value="Remover"/>
         </form>
                     <div class="footer">
   <p>DIREITOS AUTORAIS INTEGRANTES GRUPO 3</p>

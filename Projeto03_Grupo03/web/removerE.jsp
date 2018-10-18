@@ -41,7 +41,7 @@
             CNPJ:<br/><input type="text" name="CNPJ" value="<%=c.getCNPJ()%>"/></h1><br/>
             WebSite:<br/><input type="text" name="WebSite" value="<%=c.getWebSite()%>"/></h1><br/>
             Telefone:<br/><input type="text" name="Telefone" value="<%=c.getTelefone()%>"/></h1><br/>
-            <br/><input class="btr" type="submit" name="removerCadastroEmpresa" value="Remover"/>
+            <br/><input type="submit" name="removerCadastroEmpresa" value="Remover"/>
         </form>
                     <div class="footer">
   <p>DIREITOS AUTORAIS INTEGRANTES GRUPO 3</p>

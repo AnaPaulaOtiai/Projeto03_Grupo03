@@ -47,7 +47,7 @@
            CPF:<br/><input type="text" name="CPF" value="<%=c.getCPF()%>"/><br/>
            Email:<br/><input  type="text" name="Email" value="<%=c.getEmail()%>"/><br/>
            Telefone:<br/><input  type="text" name="Telefone" value="<%=c.getTelefone()%>"/><br/>
-            <br/><input class="btr" type="submit" name="alterarCadastropessoas" value="Alterar"/>
+            <br/><input type="submit" name="alterarCadastropessoas" value="Alterar"/>
         </form>
                     <div class="footer">
   <p>DIREITOS AUTORAIS INTEGRANTES GRUPO 3</p>

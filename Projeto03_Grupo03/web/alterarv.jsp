@@ -45,7 +45,7 @@
             Marca:<br/><input type="text" name="Marca" value="<%=c.getMarca()%>"/><br/>
             Modelo:<br/><input type="text" name="Modelo" value="<%=c.getModelo()%>"/><br/>
             Cor:<br/><input type="text" name="Cor" value="<%=c.getCor()%>"/></h1><br/>
-            <br/><input class="btr" type="submit" name="alterarCadastroveiculos" value="alterar"/>
+            <br/><input type="submit" name="alterarCadastroveiculos" value="alterar"/>
         </form>
                     <div class="footer">
   <p>DIREITOS AUTORAIS INTEGRANTES GRUPO 3</p>
